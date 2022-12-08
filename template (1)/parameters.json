@@ -1,0 +1,102 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "extendedLocation": {
+            "value": {}
+        },
+        "virtualNetworkName": {
+            "value": "TemplateVnet"
+        },
+        "tagsByResource": {
+            "value": {
+                "Microsoft.Network/virtualNetworks": {},
+                "Microsoft.Network/ddosProtectionPlans": {},
+                "Microsoft.Network/publicIPAddresses": {},
+                "Microsoft.Network/azureFirewalls": {},
+                "Microsoft.Network/bastionHosts": {},
+                "Microsoft.Network/natGateways": {},
+                "Microsoft.Network/publicIPPrefixes": {},
+                "Microsoft.Network/networkSecurityGroups": {}
+            }
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.0.0.0/24"
+            ]
+        },
+        "addressSpaceStartingAddressChanged": {
+            "value": false
+        },
+        "addressSpaceAddressSizeChanged": {
+            "value": true
+        },
+        "ipv6Enabled": {
+            "value": false
+        },
+        "defaultSubnetChanged": {
+            "value": true
+        },
+        "subnetsInfo": {
+            "value": [
+                {
+                    "cidr": "10.0.0.0/25",
+                    "name": "Default",
+                    "natGw": "none",
+                    "nsg": "none",
+                    "udr": "none"
+                },
+                {
+                    "cidr": "10.0.0.128/25",
+                    "name": "Default",
+                    "natGw": "none",
+                    "nsg": "none",
+                    "udr": "none"
+                }
+            ]
+        },
+        "subnetCount": {
+            "value": 2
+        },
+        "natGatewaysWithNewPublicIpAddress": {
+            "value": []
+        },
+        "natGatewaysWithoutNewPublicIpAddress": {
+            "value": []
+        },
+        "natGatewayPublicIpAddressesNewNames": {
+            "value": []
+        },
+        "networkSecurityGroupsNew": {
+            "value": []
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "webserversubnet",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/25"
+                    }
+                },
+                {
+                    "name": "databaseserversubnet",
+                    "properties": {
+                        "addressPrefix": "10.0.0.128/25"
+                    }
+                }
+            ]
+        },
+        "ddosProtectionPlanEnabled": {
+            "value": false
+        },
+        "firewallEnabled": {
+            "value": false
+        },
+        "bastionEnabled": {
+            "value": false
+        }
+    }
+}
